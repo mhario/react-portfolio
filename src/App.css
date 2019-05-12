@@ -12,3 +12,9 @@
 .App-link {
   color: #61dafb;
 }
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}

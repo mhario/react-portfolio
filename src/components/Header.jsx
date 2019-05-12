@@ -1,7 +1,9 @@
 import React from 'react'
-import Radium from 'radium'
+import Radium, { Style } from 'radium'
 
 import splash from './images/splash.jpg'
+
+import { sharedStyles } from './styles/';
 
 class Header extends React.Component {
   constructor() {
@@ -19,20 +21,18 @@ class Header extends React.Component {
   
   render() {
     return (
-      <header style={styles.header}>
+      <header style={[styles.header,
+        this.state.isShown]}>
+
+        <Style rules={styles.contents} />
+
         <section style={styles.section}>
           <header>
-            <h1 style={styles.section.h1}>
-              Mark Hario
-            </h1>
+            <h1>Mark Hario</h1>
           </header>
-          <ul style={styles.section.list}>
-            <li style={styles.section.listItem}>
-              JavaScript Web Developer &
-            </li>
-            <li style={styles.section.listItem}>
-              Fullstack Software Engineer
-            </li>
+          <ul>
+            <li>JavaScript Web Developer &</li>
+            <li>Fullstack Software Engineer</li>
           </ul>
         </section>
       </header>
@@ -46,6 +46,8 @@ export default Radium(Header)
 const headerColor = '#da8044'
 
 const styles = {
+  ...sharedStyles,
+  // React inline style objects
   header: {
     height: '100vh',
     backgroundImage: `url(${splash})`,
@@ -56,21 +58,20 @@ const styles = {
   },
   section: {
     position: 'absolute',
-    right: '5%',
-    bottom: '15%',
+    right: '5%', bottom: '15%',
+  },
+
+  // Style component Object
+  contents: {
+    ul: {
+      listStyle: 'none',
+      margin: 0,
+    },
+    'ul li': { padding: '10px 0' },
     h1: {
       margin: 0,
       color: headerColor,
       fontWeight: 'normal'
-    },
-    list: {
-      listStyle: 'none',
-      margin: 0,
-
-    },
-    listItem: {
-      padding: '10px 0'
     }
-    
   }
 }
