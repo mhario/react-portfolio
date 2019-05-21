@@ -28,7 +28,9 @@ class Header extends React.Component {
 
         <section style={styles.section}>
           <header>
-            <h1>Mark Hario</h1>
+            <h1 style={styles.component.header}>
+              Mark Hario
+            </h1>
           </header>
           <ul>
             <li>JavaScript Web Developer &</li>

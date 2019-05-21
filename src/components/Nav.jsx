@@ -31,6 +31,10 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'space-around',
 
+    position: 'sticky',
+    top: '0',
+    zIndex: '5',
+
     button: {
       flexGrow: 1,
       padding: '10px',
