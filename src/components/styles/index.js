@@ -15,3 +15,8 @@ export const sharedStyles = {
     color: 'blue'
   }
 }
+
+export const colors = {
+  orange: '#A76234',
+  brightOrange: '#DA8044'
+}

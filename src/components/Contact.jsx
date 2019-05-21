@@ -1,13 +1,20 @@
 import React from 'react'
 
-import { sharedStyles } from './styles/'
+import { Style } from 'radium'
+
+import { sharedStyles, colors } from './styles/'
 
 export default function Contact() {
   return (
-    <section style={{...styles.component,
-      ...styles.contact
-    }}>
-      <h2>Contact</h2>
+    <section
+      id="contact"
+      style={{...styles.component,
+        ...styles.contact
+      }}>
+      <Style
+        scopeSelector="#contact"
+        rules={styles.contactList} />
+      <h2 id="contact">Contact</h2>
       <ul>
         <li>Broomfield, CO</li>
         <li>(734) 755 - 2807</li>
@@ -20,10 +27,20 @@ export default function Contact() {
 const styles = {
   ...sharedStyles,
   contact: {
-    backgroundColor: 'lightgray'
+    backgroundColor: colors.brightOrange,
+    color: 'black'
+  },
+
+  contactList: {
+    'ul': {
+      width: '35%',
+      margin: 'auto',
+      listStyle: 'none'
+    },
+    'ul li': {
+      color: 'white',
+      textAlign: 'left',
+      padding: '15px'
+    }
   }
 }
-// const section = {
-//     height: '500px',
-//     backgroundColor: 'orange'
-// }

@@ -21,10 +21,14 @@ class Header extends React.Component {
   
   render() {
     return (
-      <header style={[styles.header,
-        this.state.isShown]}>
+      <header
+        id="header"
+        style={[styles.header,
+          this.state.isShown]}>
 
-        <Style rules={styles.contents} />
+        <Style
+          scopeSelector="#header"
+          rules={styles.contents} />
 
         <section style={styles.section}>
           <header>

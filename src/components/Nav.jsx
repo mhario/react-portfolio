@@ -1,6 +1,7 @@
 import React from 'react'
 import Radium from 'radium'
 
+import { colors } from './styles/'
 
 class Nav extends React.Component {
   render() {
@@ -8,11 +9,17 @@ class Nav extends React.Component {
       <nav style={styles.nav}>
         {
           links.map(link => (
-            <button
+            <a
+              href={`#${link.linkId}`}
               key={link.label}
-              style={styles.nav.button}>
+              style={styles.nav.a}>
               {link.label}
-            </button>
+              <span
+                style={styles.spaceSaver}
+                role="presentation">
+                  {link.label}
+              </span>
+            </a>
           ))
         }
       </nav>
@@ -35,21 +42,51 @@ const styles = {
     top: '0',
     zIndex: '5',
 
-    button: {
+    a: {
       flexGrow: 1,
+      backgroundColor: 'black',
+      color: colors.orange,
       padding: '10px',
       border: 'none',
       cursor: 'pointer',
       ':hover': {
-          backgroundColor: 'red'
+          fontWeight: 'bold',
+          transition: 'font-weight .5s ease'
       }
     }
+  },
+  spaceSaver: {
+    // save space for hover-state so links don't move
+    fontWeight: 'bold',
+    display: 'block',
+    height: 0,
+    overflow: 'hidden'
   }
 }
 
 const links = [
-  { label: 'About' },
-  { label: 'Projects' },
-  { label: 'Blog' },
-  { label: 'Contact' },
+  {
+    label: 'About',
+    linkId: 'about'
+  },
+  {
+    label: 'Experience',
+    linkId: 'experience'
+  },
+  {
+    label: 'Tech Skills',
+    linkId: 'skills'
+  },
+  {
+    label: 'Projects',
+    linkId: 'projects'
+  },
+  {
+    label: 'Blog',
+    linkId: 'blog'
+  },
+  {
+    label: 'Contact',
+    linkId: 'contact'
+  },
 ]

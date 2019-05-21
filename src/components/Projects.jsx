@@ -1,7 +1,10 @@
 import React from 'react'
-import Radium from 'radium'
 
+import Radium, { Style } from 'radium'
 import Project from './Project'
+
+import caretRight from './images/chevron-right.svg'
+import caretLeft from './images/chevron-left.svg'
 
 import { sharedStyles } from './styles/'
 
@@ -21,16 +24,21 @@ class Projects extends React.Component {
     return (
       <article style={[
         styles.projects ]}>
+        {/* <Style rules={styles.navButtons} /> */}
+
         <header
           style={styles.component.header}>
-          <h2>Projects</h2>
+          <h2 id="projects">Projects</h2>
         </header>
         <section
           style={styles.projectsSection}>
           <button style={[
-            styles.buttons ]}
+            styles.navButtons, styles.prev ]}
             onClick={this.viewPrev}>
-            Pr
+            <img
+              style={styles.navButtons.img}
+              alt="Previous"
+              src={caretLeft} />
           </button>
           <div
             style={styles.projectViewWindow}
@@ -45,9 +53,12 @@ class Projects extends React.Component {
             }
           </div>
           <button style={[
-            styles.buttons ]}
+            styles.navButtons, styles.next ]}
             onClick={this.viewNext}>
-            Next
+            <img
+              style={styles.navButtons.img}
+              alt="Next"
+              src={caretRight} />
           </button>
         </section>
       </article>
@@ -117,18 +128,20 @@ const styles = {
   projectsSection: {
     whiteSpace: 'nowrap',
     margin: '50px',
-    height: '40vh',
     display: 'flex',
     justifyContent: 'space-between'
-    
   },
   projectViewWindow: {
+    height: '40vh',
     position: 'relative',
     overflow: 'hidden',
     width: '75vw'
-
   },
-  buttons: {
-
+  navButtons: {
+    background: 'none',
+    border: 'none',
+    img: {
+      width: 40
+    }
   }
 }

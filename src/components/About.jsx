@@ -11,6 +11,7 @@ class AboutMe extends React.Component {
   render() {
     return (
       <article
+        id="about"
         style={[styles.component,
           styles.aboutMe]}
         className="clearfix">
