@@ -1,7 +1,9 @@
 import React from 'react'
 import Nav from './components/Nav.jsx'
 import Header from './components/Header.jsx'
-import AboutMe from './components/About.jsx'
+import About from './components/About.jsx'
+import Experience from './components/Experience.jsx'
+import Tech from './components/Tech.jsx'
 import Contact from './components/Contact.jsx'
 import Projects from './components/Projects.jsx'
 
@@ -15,7 +17,9 @@ function App() {
       <div style={styles.app}>
         <Header />
         <Nav />
-        <AboutMe />
+        <About />
+        <Experience />
+        <Tech />
         <Projects />
         <Contact />
       </div>

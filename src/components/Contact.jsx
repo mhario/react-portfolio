@@ -6,21 +6,25 @@ import { sharedStyles, colors } from './styles/'
 
 export default function Contact() {
   return (
-    <section
+    <article
       id="contact"
-      style={{...styles.component,
+      style={{ ...styles.component,
         ...styles.contact
       }}>
+
       <Style
         scopeSelector="#contact"
         rules={styles.contactList} />
-      <h2 id="contact">Contact</h2>
+
+      <header style={ styles.component.header }>
+        <h2>Contact</h2>
+      </header>
       <ul>
         <li>Broomfield, CO</li>
         <li>(734) 755 - 2807</li>
         <li>hario.mark@gmail.com</li>
       </ul>
-    </section>
+    </article>
   )
 }
 

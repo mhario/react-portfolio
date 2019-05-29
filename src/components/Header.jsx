@@ -33,7 +33,10 @@ class Header extends React.Component {
         <section style={styles.section}>
           <header>
             <h1 style={styles.component.header}>
-              Mark Hario
+              <a
+                href="#about">
+                Mark Hario
+              </a>
             </h1>
           </header>
           <ul>
@@ -74,10 +77,10 @@ const styles = {
       margin: 0,
     },
     'ul li': { padding: '10px 0' },
-    h1: {
+    'h1 a': {
       margin: 0,
       color: headerColor,
-      fontWeight: 'normal'
-    }
+      fontWeight: 'normal',
+    },
   }
 }

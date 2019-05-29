@@ -1,7 +1,9 @@
 import React from 'react'
 
-import Radium, { Style } from 'radium'
+import Radium from 'radium'
 import Project from './Project'
+
+import Upcoming from './Upcoming'
 
 import caretRight from './images/chevron-right.svg'
 import caretLeft from './images/chevron-left.svg'
@@ -22,45 +24,48 @@ class Projects extends React.Component {
 
   render () {
     return (
-      <article style={[
+      <article
+        id="projects"
+        style={[
+        styles.component,
         styles.projects ]}>
-        {/* <Style rules={styles.navButtons} /> */}
 
         <header
-          style={styles.component.header}>
-          <h2 id="projects">Projects</h2>
+          style={ styles.component.header }>
+          <h2>Projects</h2>
         </header>
         <section
-          style={styles.projectsSection}>
+          style={ styles.projectsSection }>
           <button style={[
             styles.navButtons, styles.prev ]}
             onClick={this.viewPrev}>
             <img
-              style={styles.navButtons.img}
+              style={ styles.navButtons.img }
               alt="Previous"
               src={caretLeft} />
           </button>
           <div
-            style={styles.projectViewWindow}
+            style={ styles.projectViewWindow }
             role="presentation">
             {
               projects.map((proj, index) => {
                 return <Project
-                  position={this.getPositionValue(index)}
-                  key={index}
-                  project={proj} />
+                  position={ this.getPositionValue(index) }
+                  key={ index }
+                  project={ proj } />
               })
             }
           </div>
           <button style={[
             styles.navButtons, styles.next ]}
-            onClick={this.viewNext}>
+            onClick={ this.viewNext }>
             <img
-              style={styles.navButtons.img}
+              style={ styles.navButtons.img}
               alt="Next"
-              src={caretRight} />
+              src={ caretRight } />
           </button>
-        </section>
+          </section>
+          <Upcoming />
       </article>
     )
   }

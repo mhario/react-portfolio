@@ -6,16 +6,18 @@ import { colors } from './styles/'
 class Nav extends React.Component {
   render() {
     return (
-      <nav style={styles.nav}>
+      <nav
+        id="nav"
+        style={ styles.nav }>
         {
           links.map(link => (
             <a
               href={`#${link.linkId}`}
-              key={link.label}
-              style={styles.nav.a}>
-              {link.label}
+              key={ link.label }
+              style={ styles.nav.a }>
+              { link.label }
               <span
-                style={styles.spaceSaver}
+                style={ styles.spaceSaver }
                 role="presentation">
                   {link.label}
               </span>
@@ -51,7 +53,8 @@ const styles = {
       cursor: 'pointer',
       ':hover': {
           fontWeight: 'bold',
-          transition: 'font-weight .5s ease'
+          transition: 'font-weight .5s ease',
+          color: colors.brightOrange
       }
     }
   },
@@ -74,8 +77,8 @@ const links = [
     linkId: 'experience'
   },
   {
-    label: 'Tech Skills',
-    linkId: 'skills'
+    label: 'Techs',
+    linkId: 'tech'
   },
   {
     label: 'Projects',
