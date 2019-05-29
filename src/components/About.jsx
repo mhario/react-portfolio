@@ -58,9 +58,9 @@ const styles = {
     // maxWidth: '320px',
 
     position: 'absolute',
-    '@media (max-width: 450px)': {
-      right: 'unset',
-      position: 'relative'
-    },
+    // '@media (max-width: 450px)': {
+    //   right: 'unset',
+    //   position: 'relative'
+    // },
   }
 };

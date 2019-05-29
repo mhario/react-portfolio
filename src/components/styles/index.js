@@ -18,5 +18,11 @@ export const sharedStyles = {
 
 export const colors = {
   orange: '#A76234',
-  brightOrange: '#DA8044'
+  brightOrange: '#DA8044',
+  active: 'cyan',
+
+  gray1: '#EEEEEE',
+  gray2: '#C4C4C4',
+  darkGray1: '#424042',
+  darkGray2: '#666666',
 }

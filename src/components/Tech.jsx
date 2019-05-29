@@ -26,10 +26,8 @@ export default function() {
           <li>React / Redux</li>
           <li>VueJS</li>
           <li>jQuery</li>
-          <li>Postgres</li>
         </ul>
         <ul>
-          <li>Mocha / Chai</li>
           <li>HTML5, Bootstrap</li>
           <li>CSS / Sass</li>
           <li>Web accessibility</li>
@@ -43,6 +41,7 @@ export default function() {
         <ul>
           <li>Data Structures</li>
           <li>Algorithms</li>
+          <li>Mocha / Chai</li>
           <li>TeamCity</li>
         </ul>
       </div>

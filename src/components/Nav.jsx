@@ -84,10 +84,10 @@ const links = [
     label: 'Projects',
     linkId: 'projects'
   },
-  {
-    label: 'Blog',
-    linkId: 'blog'
-  },
+  // {
+  //   label: 'Blog',
+  //   linkId: 'blog'
+  // },
   {
     label: 'Contact',
     linkId: 'contact'
