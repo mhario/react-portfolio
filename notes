@@ -1,0 +1,73 @@
+My passion for coding began at a young age. I was maybe twelve years old when I picked up a copy of Stroustrup’s own C++ text. Working through the book, I wrote my first linked list using a borrowed compiler on an ancient computer. But coding had always been a hobby to me; since then, I became a welding engineer and a robot programmer.
+
+Having worked and studied in the welding industry for nearly a decade, I finally decided to return aggressively to full-time coding. It's been now about three years since making that decision; I attended a coding bootcamp and 
+
+// welcome
+
+Hey there! Thanks for stopping by. 
+
+I'm Mark and I've been building web apps for over two years.
+
+My focus has been on front-end development with an emphasis on accessibility. While I've also spent time developing APIs, I found the most fun to be had in laying out an interface and populating it with fun animations that can delight the user: and ensuring that those with disabilities are not left behind either. 
+
+There are many exciting opportunities to pursue in the world of software and web development. I'm most curious to learn more about big data or machine learning; or in applying those tools in meaningful ways. I want to apply knowledge to affect decision making in the real world. 
+
+There's a bit more about me below. Please peruse my side projects, with which I've practiced my craft, and feel free to leave any feedback as well. 
+
+
+// Experience
+
+
+When considering a specific project, ask yourself the following questions:
+
+What specifically makes me proud of this web development project?
+How does this project differ from the ones already showcased in my portfolio?
+Am I willing to replace an existing portfolio piece with this one?
+
+
+Notes:
+  Welcome
+  about me
+    experience
+    techs / skills -- *accessibility*
+    hobbies / other cool stuff
+  projects
+    pending updates
+  blog
+    cats lol
+  contact
+    resume download
+    leave a comment
+
+
+  // update eslint with spacers inside curly braces rule
+
+  techs
+  JavaScript:
+    Node / express
+    React / Redux
+    VueJS
+    jQuery
+
+  Web stuff:
+    HTML5, Bootstrap
+    CSS / Sass
+    Web accessibility
+
+  Other:
+    Git
+    GitHub / BitBucket
+    UI / UX Design
+    Jira
+
+  CS:
+    Data Structures
+    Algorithms
+    TeamCity
+    Postgres
+
+  mocha / chai
+
+
+
+  

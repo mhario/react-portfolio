@@ -22,7 +22,7 @@ class AboutMe extends React.Component {
           style={styles.component.header}>
           <h2>Hey there!</h2>
           <img
-            alt=""
+            alt="Me"
             style={styles.img}
             src={newSkinny}/>
         </header>
@@ -53,8 +53,9 @@ const styles = {
   },
 
   img: {
-    width: '40%',
-    right: '40px', top: '150px',
+    width: '30%',
+    right: '90px', top: '150px',
+    maxWidth: '350px',
     // maxWidth: '320px',
 
     position: 'absolute',

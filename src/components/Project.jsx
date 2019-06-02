@@ -15,18 +15,8 @@ function Project(props) {
       <header>
         <h3>{props.project.name}</h3>
       </header>
-      {/* <img
-        alt="Screenshot of the project"
-        src={props.project.img}
-      /> */}
       {
-        props.project.summaryContentArray.map((p, index) => {
-          return (
-            <p
-              key={`project-${props.project.name}-${index}`}>
-              {p}</p>
-          )
-        })
+        props.project.content
       }
       <footer
         style={styles.buttonBar}>
@@ -63,7 +53,6 @@ const styles = {
     display: 'flex',
     flexDirection: 'row',
     padding: 0
-
   },
 
   listStyling: {
@@ -71,6 +60,8 @@ const styles = {
       flexGrow: 1,
       justifyContent: 'space-between',
       backgroundColor: 'blue',
+      cursor: 'pointer',
+      padding: '10px',
       ...sharedStyles.button
     }
   }

@@ -105,23 +105,24 @@ const projects = [
   {
     name: 'BiteSwipeLite',
     url: null,
-    summaryContentArray: [
-      'Originally built on React Native with a team of three from the bootcamp, '
-    ]
+    content: <p>
+              'Originally built on React Native with a team of three from the bootcamp, '
+            </p>
+    
     // img
   },
   {
     name: '3D Game of Life',
-    summaryContentArray: [
-
-    ]
+    content: <p>
+      'Originally built on React Native with a team of three from the bootcamp, '
+            </p>
   },
   {
     name: 'Codsworx',
     url: null,
-    summaryContentArray: [
-
-    ]
+    content: <p>
+      'Originally built on React Native with a team of three from the bootcamp, '
+            </p>
   }
 ]
 
@@ -145,8 +146,9 @@ const styles = {
   navButtons: {
     background: 'none',
     border: 'none',
+    cursor: 'pointer',
     img: {
       width: 40
-    }
+    },
   }
 }

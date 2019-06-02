@@ -1,5 +1,9 @@
 import React from 'react'
 
+import IHS from './jobs/IHS.jsx'
+import Vizient from './jobs/Vizient.jsx'
+// import { IHS, Vizient } from './jobs/'
+
 import { Style } from 'radium'
 
 import { sharedStyles, colors } from './styles'
@@ -39,34 +43,33 @@ export default class Experience extends React.Component {
           <section
             style={ styles.experienceWindow }>
 
-          <section
-            style={ styles.listPane }>
-            <div role="presentation">
-              <span style={ styles.label }>Recent Work</span>
-              <ul
-                style={ styles.list }>
-                <li
-                  style={ this.getActiveStyle(0) }
-                  onClick={ () => this.setState({ currentViewIndex: 0 }) }
-                >IHS Markit</li>
-              </ul>
-              <span style={ styles.label }>Older Positions</span>
-              <ul>
-                <li
-                  style={ this.getActiveStyle(1) }
-                  onClick={ () => this.setState({ currentViewIndex: 1 }) }
-                >Vizient</li>
-                <li 
-                  style={ this.getActiveStyle(2) }
-                  onClick={ () => this.setState({ currentViewIndex: 2 }) }
-                >Vizient</li>
-              </ul>
-            </div>
-              </section>
-              <section
-                style={ styles.detailsPane }>
-                IHs lol
+            <section
+              style={ styles.listPane }>
+              <div role="presentation">
+                <span style={ styles.label }>Recent Work</span>
+                <ul
+                  style={ styles.list }>
+                  <li
+                    style={ this.getActiveStyle(0) }
+                    onClick={() => this.setState({ currentViewIndex: 0 })}
+                  >IHS Markit</li>
+                </ul>
+                <span style={ styles.label }>Older Positions</span>
+                <ul>
+                  <li
+                    style={ this.getActiveStyle(1) }
+                    onClick={() => this.setState({ currentViewIndex: 1 })}
+                  >Vizient</li>
+                  <li 
+                    style={ this.getActiveStyle(2) }
+                    onClick={() => this.setState({ currentViewIndex: 2 })}
+                  >Vizient</li>
+                </ul>
+              </div>
             </section>
+            <IHS />
+            <Vizient />
+
           </section>
 
         </header>
@@ -83,20 +86,21 @@ const styles = {
     display: 'flex',
     backgroundColor: colors.gray1,
     margin: '20px auto',
-    width: '70vw',
+    width: '80vw',
     border: `1px solid ${colors.gray2}`,
     borderRadius: '3px',
   },
   detailsPane: {
     flexGrow: 1,
-    backgroundColor: 'grey',
+    backgroundColor: colors.gray3,
     padding: '20px'
   },
 
   label: {
     display: 'block',
     padding: '5px 15px 5px 5px',
-    color: colors.darkGray2
+    color: colors.darkGray2,
+    fontSize: '0.8rem'
   },
   active: {
     marginRight: '0px',
