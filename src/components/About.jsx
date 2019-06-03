@@ -25,13 +25,9 @@ class AboutMe extends React.Component {
             style={styles.img}
             src={newSkinny}/>
         </header>
-        {
-          content.welcome.map((p, index) => {
-            return (
-              <p key={index}>{p}</p>
-            )
-          })
-        }
+        { content.welcome.map((p, index) => <p key={index}>{p}</p>) }
+        {/* later, add the more-details section as an expandable */}
+        { content.welcome2.map((p, index) => <p key={index}>{p}</p>) }
 
       </article>
     )

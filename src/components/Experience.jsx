@@ -81,12 +81,14 @@ export default class Experience extends React.Component {
                 <ul>
                   <li style={ this.getActiveStyle(2) }>
                     <button
+                      disabled
                       onClick={() => this.setState({ currentViewIndex: 2 })}
                     >Vizient</button>
                   </li>
                   <li 
                     style={ this.getActiveStyle(3) }>
                     <button
+                      disabled
                       onClick={() => this.setState({ currentViewIndex: 3 })}
                     >PNC</button>
                   </li>
@@ -155,14 +157,15 @@ const styles = {
       padding: '10px 10px 10px 20px',
       border: 'none',
       background: 'none',
-      cursor: 'pointer',
       width: '100%',
       textAlign: 'left',
     },
-    
-    '#list-pane ul li:hover': {
-      backgroundColor: colors.orange
+    '#list-pane ul li button:not(:disabled)': {
+      cursor: 'pointer',
     },
+    // '#list-pane ul li:hover': {
+    //   backgroundColor: colors.orange
+    // },
     '.details-view': {
       'overflow-y': 'scroll'
     },

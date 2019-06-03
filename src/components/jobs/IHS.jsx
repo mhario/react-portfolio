@@ -17,7 +17,7 @@ export function IHS() {
       </header>
       <ul style={styles.experienceEntry.ul}>
         {
-          listStrings.map(str => <li>{str}</li>)
+          listStrings.map((str,index) => <li key={index}>{str}</li>)
         }
       </ul>
     </article>
