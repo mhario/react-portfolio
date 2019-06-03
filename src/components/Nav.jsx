@@ -56,7 +56,7 @@ const styles = {
     a: {
       flexGrow: 1,
       backgroundColor: 'black',
-      color: colors.orange,
+      color: colors.brightOrange,
       padding: '10px',
       border: 'none',
       cursor: 'pointer',
@@ -64,7 +64,7 @@ const styles = {
     'a:hover': {
         fontWeight: 'bold',
         transition: 'font-weight .5s ease',
-        color: colors.brightOrange
+        color: 'orange'
     },
     'a.inverse': {
       backgroundColor: colors.orange,
@@ -74,7 +74,7 @@ const styles = {
     },
     'a.inverse:hover': {
       boxShadow: '-2px 2px 11px 7px rgba(0, 0, 0, 0.55)',
-      backgroundColor: colors.brightOrange,
+      backgroundColor: 'orange',
       color: 'black',
     }
   }

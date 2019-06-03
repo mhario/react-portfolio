@@ -14,6 +14,13 @@ There are many exciting opportunities to pursue in the world of software and web
 
 There's a bit more about me below. Please peruse my side projects, with which I've practiced my craft, and feel free to leave any feedback as well. 
 
+// To-do's
+Export my eslint rules in a better fashion.
+Update them:
+  Spaces inside curly braces in JSX
+  constants should be in all caps
+  
+
 
 // Experience
 

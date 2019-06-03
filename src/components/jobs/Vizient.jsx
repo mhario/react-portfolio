@@ -1,12 +1,12 @@
 import React from 'react'
 
-// import { colors } from './styles/'
 import { sharedStyles } from '../styles'
-// import { sharedStyles } from '../../'
 
-export default function() {
+export function Vizient() {
   return (
-    <article>
+    <article
+      className="details-view"
+      style={styles.experienceEntry}>
       <header>
         <h3>IHS Markit</h3>
       </header>
@@ -27,8 +27,5 @@ export default function() {
 
 
 const styles = {
-  ...sharedStyles,
-  listsWraper: {
-    display: 'flex'
-  }
+  ...sharedStyles
 }

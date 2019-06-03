@@ -65,5 +65,5 @@ const styles = {
     'ul:first-child': {
       fontSize: '15px'
     },
-  },
+  }, 
 }

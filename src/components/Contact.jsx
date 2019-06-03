@@ -8,15 +8,15 @@ export default function Contact() {
   return (
     <article
       id="contact"
-      style={{ ...styles.component,
+      style={{
         ...styles.contact
       }}>
 
       <Style
         scopeSelector="#contact"
-        rules={styles.contactList} />
+        rules={ styles.contactList } />
 
-      <header style={ styles.component.header }>
+      <header>
         <h2>Contact</h2>
       </header>
       <ul>
@@ -32,10 +32,15 @@ const styles = {
   ...sharedStyles,
   contact: {
     backgroundColor: colors.brightOrange,
-    color: 'black'
+    color: 'black',
+    marginLeft: '0', marginRight: '0',
+    paddingTop: '50px', paddingBottom: '50px'
   },
 
   contactList: {
+    'h2': {
+      paddingLeft: '100px'
+    },
     'ul': {
       width: '35%',
       margin: 'auto',

@@ -16,7 +16,7 @@ class AboutMe extends React.Component {
           styles.aboutMe]}
         className="clearfix">
 
-        <Style rules={styles.aboutMe} />
+        <Style rules={styles.aboutMe} scopeSelector="#about" />
 
         <header>
           <h2>Hey there!</h2>
@@ -63,7 +63,7 @@ const styles = {
 
   img: {
     width: '30%',
-    right: '10%', top: '250px',
+    right: '10%', top: '20%',
     maxWidth: '350px',
 
     position: 'absolute',
