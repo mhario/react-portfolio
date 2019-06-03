@@ -18,8 +18,7 @@ class AboutMe extends React.Component {
 
         <Style rules={styles.aboutMe} />
 
-        <header
-          style={styles.component.header}>
+        <header>
           <h2>Hey there!</h2>
           <img
             alt="Me"
@@ -46,6 +45,16 @@ const styles = {
   aboutMe: {
     position: 'relative',
     paddingRight: '50%',
+    'header': {
+      textAlign: 'left'
+    },
+    'h2': {
+      paddingLeft: '50px'
+    },
+    '@media (max-width: 550px)': {
+      paddingRight: '100px',
+      minWidth: '200px',
+    },
 
     p: {
       textAlign: 'justify'
@@ -54,14 +63,17 @@ const styles = {
 
   img: {
     width: '30%',
-    right: '90px', top: '150px',
+    right: '10%', top: '250px',
     maxWidth: '350px',
-    // maxWidth: '320px',
 
     position: 'absolute',
-    // '@media (max-width: 450px)': {
-    //   right: 'unset',
-    //   position: 'relative'
-    // },
+    '@media (max-width: 550px)': {
+      right: 'unset',
+      position: 'relative',
+      maxWidth: '100%',
+      minWidth: '200px',
+      width: 'auto',
+      top: 'unset',
+    },
   }
 };

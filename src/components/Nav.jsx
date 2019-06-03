@@ -1,5 +1,5 @@
 import React from 'react'
-import Radium from 'radium'
+import Radium, { Style } from 'radium'
 
 import { colors } from './styles/'
 
@@ -8,18 +8,21 @@ class Nav extends React.Component {
     return (
       <nav
         id="nav"
-        style={ styles.nav }>
+        style={ styles  }>
+
+        <Style rules={styles.links} scopeSelector="#nav" />
         {
           links.map(link => (
             <a
-              href={`#${link.linkId}`}
+              href={`${link.linkId}`}
               key={ link.label }
-              style={ styles.nav.a }>
+              // style={[ styles.nav.a ]}
+              className={ link.inverse ? 'inverse' : ''}>
               { link.label }
               <span
                 style={ styles.spaceSaver }
                 role="presentation">
-                  {link.label}
+                  { link.label }
               </span>
             </a>
           ))
@@ -32,18 +35,24 @@ class Nav extends React.Component {
 export default Radium(Nav)
 
 const styles = {
-  app: {
-      textAlign: 'center'
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'space-around',
+
+  position: 'sticky',
+  top: '0',
+
+  zIndex: '5',
+  spaceSaver: {
+    // save space for hover-state so links don't move
+    fontWeight: 'bold',
+    display: 'block',
+    height: 0,
+    overflow: 'hidden'
   },
-  nav: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-around',
 
-    position: 'sticky',
-    top: '0',
-    zIndex: '5',
 
+  links: {
     a: {
       flexGrow: 1,
       backgroundColor: 'black',
@@ -51,45 +60,55 @@ const styles = {
       padding: '10px',
       border: 'none',
       cursor: 'pointer',
-      ':hover': {
-          fontWeight: 'bold',
-          transition: 'font-weight .5s ease',
-          color: colors.brightOrange
-      }
+    },
+    'a:hover': {
+        fontWeight: 'bold',
+        transition: 'font-weight .5s ease',
+        color: colors.brightOrange
+    },
+    'a.inverse': {
+      backgroundColor: colors.orange,
+      color: 'black',
+      position: 'relative',
+      transition: 'all 0.3s ease'
+    },
+    'a.inverse:hover': {
+      boxShadow: '-2px 2px 11px 7px rgba(0, 0, 0, 0.55)',
+      backgroundColor: colors.brightOrange,
+      color: 'black',
     }
-  },
-  spaceSaver: {
-    // save space for hover-state so links don't move
-    fontWeight: 'bold',
-    display: 'block',
-    height: 0,
-    overflow: 'hidden'
   }
 }
 
 const links = [
   {
     label: 'About',
-    linkId: 'about'
+    linkId: '#about',
+    inverse: 0
   },
   {
     label: 'Experience',
-    linkId: 'experience'
+    linkId: '#experience',
+    inverse: 0
   },
   {
     label: 'Techs',
-    linkId: 'tech'
+    linkId: '#tech',
+    inverse: 0
   },
   {
     label: 'Projects',
-    linkId: 'projects'
+    linkId: '#projects',
+    inverse: 0
   },
-  // {
-  //   label: 'Blog',
-  //   linkId: 'blog'
-  // },
   {
     label: 'Contact',
-    linkId: 'contact'
+    linkId: '#contact',
+    inverse: 0
   },
+  {
+    label: 'Resumé',
+    linkId: 'HarioResume.pdf',
+    inverse: 1
+  }
 ]

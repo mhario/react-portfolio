@@ -1,9 +1,9 @@
 export const sharedStyles = {
   component: {
-    paddingTop: '100px',
-    paddingBottom: '100px',
-    paddingLeft: '50px',
-    paddingRight: '50px',
+    marginTop: '100px',
+    marginBottom: '100px',
+    marginLeft: '50px',
+    marginRight: '50px',
     header: {
       textAlign: 'left',
       paddingLeft: '50px'
