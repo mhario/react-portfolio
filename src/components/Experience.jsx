@@ -2,6 +2,7 @@ import React from 'react'
 
 import { IHS } from './jobs/IHS.jsx'
 import { FSA } from './jobs/FSA.jsx'
+import { Ferris } from './jobs/Ferris.jsx'
 import { Vizient } from './jobs/Vizient.jsx'
 import { PNC } from './jobs/PNC.jsx'
 
@@ -17,6 +18,7 @@ export default class Experience extends React.Component {
       jobs: [
         IHS,
         FSA,
+        Ferris,
         Vizient,
         PNC
       ]
@@ -43,7 +45,7 @@ export default class Experience extends React.Component {
           scopeSelector="#experience"
           rules={ styles.componentObject }
         />
-        <Style rules={ styles.experienceEntry } />
+        <Style rules={ styles.experienceEntry } scopeSelector=".detail-view" />
 
         <header
           style={{textAlign:'left'}}>
@@ -67,7 +69,7 @@ export default class Experience extends React.Component {
                     >IHS Markit</button>
                   </li>
                 </ul>
-                {/* <span style={ styles.label }>
+                <span style={ styles.label }>
                   Coding Education
                 </span>
                 <ul style={ styles.list }>
@@ -76,20 +78,25 @@ export default class Experience extends React.Component {
                       onClick={() => this.setState({ currentViewIndex: 1 })}
                     >Fullstack Academy</button>
                   </li>
-                </ul> */}
-                <span style={ styles.label }>Older Positions</span>
-                <ul>
+                </ul>
+                <span style={ styles.label }>
+                  Previous Work
+                </span>
+                <ul style={ styles.list }>
                   <li style={ this.getActiveStyle(2) }>
                     <button
-                      disabled
                       onClick={() => this.setState({ currentViewIndex: 2 })}
+                    >Ferris State University</button>
+                  </li>
+                  <li style={ this.getActiveStyle(3) }>
+                    <button
+                      onClick={() => this.setState({ currentViewIndex: 3 })}
                     >Vizient</button>
                   </li>
-                  <li 
-                    style={ this.getActiveStyle(3) }>
+                  <li
+                    style={ this.getActiveStyle(4) }>
                     <button
-                      disabled
-                      onClick={() => this.setState({ currentViewIndex: 3 })}
+                      onClick={() => this.setState({ currentViewIndex: 4 })}
                     >PNC</button>
                   </li>
                 </ul>
@@ -110,12 +117,12 @@ export default class Experience extends React.Component {
 const styles = {
   ...sharedStyles,
   listPane: {
-    width: '30%',
+    width: '40%',
   },
   experienceWindow: {
     display: 'flex',
     backgroundColor: colors.gray1,
-    margin: '20px auto',
+    margin: '50px auto',
     width: '65vw', minWidth: '300px',
     height: '55vh', minHeight: '250px',
     border: `1px solid ${colors.gray2}`,
@@ -130,7 +137,7 @@ const styles = {
   },
   active: {
     marginRight: '0px',
-    paddingRight: '10px',
+    // paddingRight: '10px',
     backgroundColor: 'orange'
   },
   listBorder: {
@@ -151,7 +158,7 @@ const styles = {
     },
     'ul li': {
       textAlign: 'left',
-      marginRight: '10px' // 'not active'
+      marginRight: '20px' // 'not active'
     },
     '#list-pane ul li button': {
       padding: '10px 10px 10px 20px',
@@ -160,12 +167,12 @@ const styles = {
       width: '100%',
       textAlign: 'left',
     },
-    '#list-pane ul li button:not(:disabled)': {
+    '#list-pane ul li:not(.disabled) button': {
       cursor: 'pointer',
     },
-    // '#list-pane ul li:hover': {
-    //   backgroundColor: colors.orange
-    // },
+    '#list-pane ul li:not(.disabled):hover': {
+      backgroundColor: colors.orange
+    },
     '.details-view': {
       'overflow-y': 'scroll'
     },

@@ -23,7 +23,9 @@ export const sharedStyles = {
     textAlign: 'center',
     width: '100%',
     ul: {
-      padding: '10px 20px 10px 10px'
+      maxWidth: '350px',
+      margin: '0 auto',
+      padding: '10px 20px 10px 10px',
     }
   },
   dateLocation: {

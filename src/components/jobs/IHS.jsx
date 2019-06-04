@@ -9,7 +9,7 @@ export function IHS() {
       style={styles.experienceEntry}>
       <header>
         <h3>IHS Markit</h3>
-        <h4>Associate ​ Software Engineer II</h4>
+        <h4>Associate ​Software Engineer II</h4>
         <p style={styles.dateLocation}>
           <span>Boulder, CO</span>
           <span>May 2017 / Current</span>
