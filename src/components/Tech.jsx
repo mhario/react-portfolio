@@ -7,8 +7,8 @@ import { sharedStyles } from './styles'
 export default function() {
   return (
     <article
-      id="tech"
-      style={ styles.component }>
+      style={styles.techs}
+      id="tech">
 
       <Style
         scopeSelector="#tech"
@@ -46,6 +46,13 @@ export default function() {
 
 const styles = {
   ...sharedStyles,
+  techs: {
+    margin: '50px 0 0',
+    backgroundColor: '#eee',
+    color: '#333',
+    padding: '20px 50px 20px',
+  },
+
   wrapperDiv: {
     display: 'flex',
     flexDirection: 'row'

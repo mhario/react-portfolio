@@ -7,6 +7,8 @@ import { content } from './content'
 // import oldFat from './images/oldFat.jpeg'
 import newSkinny from './images/newSkinny.jpeg'
 
+import { colors } from './styles/'
+
 class AboutMe extends React.Component {
   render() {
     return (
@@ -36,6 +38,7 @@ class AboutMe extends React.Component {
 
 export default Radium(AboutMe)
 
+
 const styles = {
   ...sharedStyles,
   aboutMe: {
@@ -45,7 +48,8 @@ const styles = {
       textAlign: 'left'
     },
     'h2': {
-      paddingLeft: '50px'
+      paddingLeft: '50px',
+      color: colors.brightOrange
     },
     '@media (max-width: 550px)': {
       paddingRight: '100px',

@@ -18,11 +18,8 @@ export function FSA() {
           <span style={styles.rightAlign}>September 2016<br />- February 2017</span>
         </p>
       </header>
-      <ul style={styles.experienceEntry.ul}>
-        <li>Sixteen-week immersive, attended remotely via video-chat virtual classroom.</li>
-        <li><a href="https://www.fullstackacademy.com/curriculum">comprehensive curriculum</a></li>
-        <li><a href={syllabusUrl}>Syllabus direct link</a></li>
-      </ul>
+      <p><a href="https://www.fullstackacademy.com/curriculum">Comprehensive curriculum</a></p>
+      <p><a href={syllabusUrl}>Syllabus direct link</a></p>
 
     </article>
   )
