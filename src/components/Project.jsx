@@ -20,8 +20,12 @@ function Project(props) {
       }
       <footer
         style={styles.buttonBar}>
-        <button>GitHub</button>
-        <button>Live</button>
+        <a
+          href={props.project.githubUrl}>GitHub</a>
+        <a
+          disabled={props.project.liveUrl}
+          title={props.project.liveUrl ? null : "Sorry, not quite ready yet!" }
+          href={props.project.liveUrl}>Live</a>
       </footer>
     </article>
   )
@@ -56,11 +60,8 @@ const styles = {
   },
 
   listStyling: {
-    'footer button': {
+    'footer a': {
       flexGrow: 1,
-      justifyContent: 'space-between',
-      backgroundColor: 'blue',
-      cursor: 'pointer',
       padding: '10px',
       ...sharedStyles.button
     }

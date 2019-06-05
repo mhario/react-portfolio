@@ -48,67 +48,67 @@ export default class Experience extends React.Component {
         <Style rules={ styles.experienceEntry } scopeSelector=".detail-view" />
 
         <header
-          style={{textAlign:'left'}}>
+          style={ styles.component.header }>
           <h2>Experience</h2>
-
-          <section style={ styles.experienceWindow }>
-
-            <section
-              id="list-pane"
-              style={ styles.listPane }>
-              <div
-                style={styles.listBorder}
-                role="presentation">
-                <span style={ styles.label }>
-                  Current Work
-                </span>
-                <ul style={ styles.list }>
-                  <li style={ this.getActiveStyle(0) }>
-                    <button
-                      onClick={() => this.setState({ currentViewIndex: 0 })}
-                    >IHS Markit</button>
-                  </li>
-                </ul>
-                <span style={ styles.label }>
-                  Coding Education
-                </span>
-                <ul style={ styles.list }>
-                  <li style={ this.getActiveStyle(1) }>
-                    <button
-                      onClick={() => this.setState({ currentViewIndex: 1 })}
-                    >Fullstack Academy</button>
-                  </li>
-                </ul>
-                <span style={ styles.label }>
-                  Previous Work
-                </span>
-                <ul style={ styles.list }>
-                  <li style={ this.getActiveStyle(2) }>
-                    <button
-                      onClick={() => this.setState({ currentViewIndex: 2 })}
-                    >Ferris State University</button>
-                  </li>
-                  <li style={ this.getActiveStyle(3) }>
-                    <button
-                      onClick={() => this.setState({ currentViewIndex: 3 })}
-                    >Vizient</button>
-                  </li>
-                  <li
-                    style={ this.getActiveStyle(4) }>
-                    <button
-                      onClick={() => this.setState({ currentViewIndex: 4 })}
-                    >PNC</button>
-                  </li>
-                </ul>
-              </div>
-            </section>
-            {
-              this.state.jobs[currentIndex]
-                ? this.state.jobs[currentIndex]()
-                : null
-            }
-          </section>
         </header>
+
+        <section style={ styles.experienceWindow }>
+
+          <section
+            id="list-pane"
+            style={ styles.listPane }>
+            <div
+              style={styles.listBorder}
+              role="presentation">
+              <span style={ styles.label }>
+                Current Work
+              </span>
+              <ul style={ styles.list }>
+                <li style={ this.getActiveStyle(0) }>
+                  <button
+                    onClick={() => this.setState({ currentViewIndex: 0 })}
+                  >IHS Markit</button>
+                </li>
+              </ul>
+              <span style={ styles.label }>
+                Coding Education
+              </span>
+              <ul style={ styles.list }>
+                <li style={ this.getActiveStyle(1) }>
+                  <button
+                    onClick={() => this.setState({ currentViewIndex: 1 })}
+                  >Fullstack Academy</button>
+                </li>
+              </ul>
+              <span style={ styles.label }>
+                Previous Work
+              </span>
+              <ul style={ styles.list }>
+                <li style={ this.getActiveStyle(2) }>
+                  <button
+                    onClick={() => this.setState({ currentViewIndex: 2 })}
+                  >Ferris State University</button>
+                </li>
+                <li style={ this.getActiveStyle(3) }>
+                  <button
+                    onClick={() => this.setState({ currentViewIndex: 3 })}
+                  >Vizient</button>
+                </li>
+                <li
+                  style={ this.getActiveStyle(4) }>
+                  <button
+                    onClick={() => this.setState({ currentViewIndex: 4 })}
+                  >PNC</button>
+                </li>
+              </ul>
+            </div>
+          </section>
+          {
+            this.state.jobs[currentIndex]
+              ? this.state.jobs[currentIndex]()
+              : null
+          }
+        </section>
       </article>
     )
   }

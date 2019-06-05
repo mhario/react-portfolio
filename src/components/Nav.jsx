@@ -96,11 +96,11 @@ const links = [
     linkId: '#tech',
     inverse: 0
   },
-  // {
-  //   label: 'Projects',
-  //   linkId: '#projects',
-  //   inverse: 0
-  // },
+  {
+    label: 'Projects',
+    linkId: '#projects',
+    inverse: 0
+  },
   {
     label: 'Contact',
     linkId: '#contact',

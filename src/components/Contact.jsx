@@ -16,7 +16,8 @@ export default function Contact() {
         scopeSelector="#contact"
         rules={ styles.contactList } />
 
-      <header>
+      <header
+        style={ styles.component.header }>
         <h2>Contact</h2>
       </header>
       <ul>
@@ -39,7 +40,7 @@ const styles = {
 
   contactList: {
     'h2': {
-      paddingLeft: '100px'
+      paddingLeft: '50px'
     },
     'ul': {
       width: '35%',
