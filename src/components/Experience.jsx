@@ -156,7 +156,7 @@ const styles = {
       fontSize: '14px',
 
     },
-    'ul li': {
+    '#list-pane ul li': {
       textAlign: 'left',
       marginRight: '20px' // 'not active'
     },
@@ -177,7 +177,9 @@ const styles = {
       'overflow-y': 'scroll'
     },
     '.details-view ul li': {
-      padding: '10px 20px 10px 10px'
+      padding: '10px 20px 10px 10px',
+      textAlign: 'left',
+
     }
   }
 }

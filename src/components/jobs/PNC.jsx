@@ -12,7 +12,7 @@ export function PNC() {
         <h4>Welding Engineering Intern</h4>
         <p style={styles.dateLocation}>
           <span>Grand Rapids, MI</span>
-          <span>May 2017 / Current</span>
+          <span style={styles.rightAlign}>May 2017 / Current</span>
         </p>
       </header>
       <ul style={styles.experienceEntry.ul}>

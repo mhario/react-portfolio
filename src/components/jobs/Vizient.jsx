@@ -12,7 +12,7 @@ export function Vizient() {
         <h4>Robot Programmer</h4>
         <p style={styles.dateLocation}>
           <span>Bettendorf, IA</span>
-          <span>September 2014 - September 2016</span>
+          <span>September 2014<br />- September 2016</span>
         </p>
       </header>
       <div

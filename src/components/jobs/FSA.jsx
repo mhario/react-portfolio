@@ -2,7 +2,10 @@ import React from 'react'
 
 import { sharedStyles } from '../styles/index.js'
 
+const syllabusUrl = 'https://www.fullstackacademy.com/assets/Full-time%20Syllabus%20-%20Fullstack%20Academy.pdf'
+
 export function FSA() {
+
   return (
     <article
       className="details-view"
@@ -12,16 +15,14 @@ export function FSA() {
         <h4>Remote Immersive Cohort</h4>
         <p style={styles.dateLocation}>
           <span>New York, NY</span>
-          <span>September 2016 - February 2017</span>
+          <span style={styles.rightAlign}>September 2016<br />- February 2017</span>
         </p>
       </header>
       <ul style={styles.experienceEntry.ul}>
-        {/* {
-          listStrings.map((str,index) => <li key={index}>{str}</li>)
-        } */}
-        <li>'Sixteen-week immersive, attended remotely via video-chat virtual classroom.'</li>
-        <li>'Comprehensive curiculum, including:'</li>
-      </ul> 
+        <li>Sixteen-week immersive, attended remotely via video-chat virtual classroom.</li>
+        <li><a href="https://www.fullstackacademy.com/curriculum">comprehensive curriculum</a></li>
+        <li><a href={syllabusUrl}>Syllabus direct link</a></li>
+      </ul>
 
     </article>
   )
@@ -30,9 +31,3 @@ export function FSA() {
 const styles = {
   ...sharedStyles,
 }
-
-const listStrings = [
-  'Sixteen-week immersive, attended remotely via video-chat virtual classroom.',
-  'Comprehensive curiculum, including:',
-  ''
-]

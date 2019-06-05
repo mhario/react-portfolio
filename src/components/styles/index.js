@@ -1,4 +1,7 @@
 export const sharedStyles = {
+  rightAlign: {
+    textAlign: 'right'
+  },
   component: {
     marginTop: '50px',
     marginBottom: '50px',
@@ -22,6 +25,10 @@ export const sharedStyles = {
     padding: '20px',
     textAlign: 'center',
     width: '100%',
+    header: {
+      maxWidth: '350px',
+      margin: 'auto'
+    },
     ul: {
       maxWidth: '350px',
       margin: '0 auto',
@@ -32,7 +39,9 @@ export const sharedStyles = {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    fontSize: '15px'
+    fontSize: '15px',
+    maxWidth: '450px',
+    margin: '15px auto'
   }
 }
 

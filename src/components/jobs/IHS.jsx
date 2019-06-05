@@ -12,7 +12,7 @@ export function IHS() {
         <h4>Associate ​Software Engineer II</h4>
         <p style={styles.dateLocation}>
           <span>Boulder, CO</span>
-          <span>May 2017 / Current</span>
+          <span style={styles.rightAlign}>May 2017 / Current</span>
         </p>
       </header>
       <ul style={styles.experienceEntry.ul}>
