@@ -20,9 +20,10 @@ export default function Contact() {
         <h2>Contact</h2>
       </header>
       <ul>
-        <li>Broomfield, CO</li>
+        <li><a href="https://www.linkedin.com/in/mark-hario-6b871285/">LinkedIn</a></li>
+        <li>Louisville, CO</li>
         <li>(734) 755 - 2807</li>
-        <li>hario.mark@gmail.com</li>
+        <li><a href="mailto:hario.mark@gmail.com">hario.mark@gmail.com</a></li>
       </ul>
     </article>
   )
@@ -38,9 +39,6 @@ const styles = {
   },
 
   contactList: {
-    'h2': {
-      paddingLeft: '100px'
-    },
     'ul': {
       width: '35%',
       margin: 'auto',
@@ -48,7 +46,7 @@ const styles = {
     },
     'ul li': {
       color: 'white',
-      textAlign: 'left',
+      textAlign: 'center',
       padding: '15px'
     }
   }

@@ -2,13 +2,13 @@ import React from 'react'
 
 import { Style } from 'radium'
 
-import { sharedStyles } from './styles'
+import { sharedStyles, colors } from './styles'
 
 export default function() {
   return (
     <article
       id="tech"
-      style={ styles.component }>
+      style={{ padding: '50px 0', background: colors.gray1 }}>
 
       <Style
         scopeSelector="#tech"
@@ -30,7 +30,7 @@ export default function() {
         <ul>
           <li>Node</li>
           <li>Express</li> 
-          <li>Postgres</li>
+          <li>Postgres / Mongoose</li>
           <li>Mocha / Chai</li>
         </ul>
         <ul>
@@ -40,6 +40,10 @@ export default function() {
           <li>Jira</li>
         </ul>
       </div>
+      <section>
+        <h3 style={{display:'inline-block', marginRight:'20px'}}>Studying:</h3>
+        <small>AWS, Docker, DevOps</small>
+      </section>
     </article>
   )
 }

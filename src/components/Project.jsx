@@ -33,10 +33,10 @@ function Project(props) {
       }
       <footer
         style={styles.buttonBar}>
-        <a href={props.project.githubUrl}>GitHub</a>
+        <a href={props.project.githubUrl} tabIndex="-1">GitHub</a>
         {
           props.project.liveUrl
-            ? <a href={props.project.liveUrl}>Live</a>
+            ? <a href={props.project.liveUrl} tabIndex="-1">Live</a>
             : <span className="button" disabled>Live</span>
         }
       </footer>

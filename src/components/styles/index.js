@@ -7,7 +7,7 @@ export const sharedStyles = {
     marginBottom: '50px',
     marginLeft: '50px',
     marginRight: '50px',
-    paddingTop: '50px',
+    padding: '50px 0',
     header: {
       textAlign: 'left',
       paddingLeft: '50px',

@@ -178,10 +178,10 @@ const projects = [
         Originally built by with a team of three on React Native.<br />
         More recently, I've started to rebuild it as a React app. 
         <h4>Technologies</h4>
-        <p style={styles.dateLocation}>          
-          <span>ThreeJS</span>
+        <p style={styles.dateLocation}>
           <span>React</span>
-          <span>Express API</span>
+          <span>Express</span>
+          <span>Yelp API</span>
         </p>
         <h4>Technical Challenges</h4>
         <ul>
@@ -205,8 +205,8 @@ const projects = [
         <h4>Technologies</h4>
         <p style={styles.dateLocation}>
           <span>React</span>
-          <span>Postgres</span>
-          <span>Express API</span>
+          <span>Mongoose</span>
+          <span>Express</span>
         </p>
         <strong style={styles.spacer10}>This project is in its very early stages! More to come later.</strong>
         {/* <header>Coming Updates</header>

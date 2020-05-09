@@ -1,7 +1,8 @@
 import React from 'react'
 
+import { Denovo } from './jobs/Denovo.jsx'
 import { IHS } from './jobs/IHS.jsx'
-import { FSA } from './jobs/FSA.jsx'
+// import { FSA } from './jobs/FSA.jsx'
 import { Vizient } from './jobs/Vizient.jsx'
 import { PNC } from './jobs/PNC.jsx'
 
@@ -15,8 +16,8 @@ export default class Experience extends React.Component {
     this.state = {
       currentViewIndex: 0,
       jobs: [
+        Denovo,
         IHS,
-        FSA,
         Vizient,
         PNC
       ]
@@ -58,12 +59,15 @@ export default class Experience extends React.Component {
                 style={styles.listBorder}
                 role="presentation">
                 <span style={ styles.label }>
-                  Current Work
+                  Software Engineering
                 </span>
                 <ul style={ styles.list }>
                   <li style={ this.getActiveStyle(0) }>
-                    <button
-                      onClick={() => this.setState({ currentViewIndex: 0 })}
+                    <button style={ this.getActiveStyle(0) } onClick={() => this.setState({ currentViewIndex: 0 })}
+                    >Denovo</button>
+                  </li>
+                  <li style={ this.getActiveStyle(1) }>
+                    <button style={ this.getActiveStyle(1) } onClick={() => this.setState({ currentViewIndex: 1 })}
                     >IHS Markit</button>
                   </li>
                 </ul>
@@ -117,7 +121,7 @@ const styles = {
     backgroundColor: colors.gray1,
     margin: '20px auto',
     width: '65vw', minWidth: '300px',
-    height: '55vh', minHeight: '250px',
+    height: '45vh', minHeight: '250px',
     border: `1px solid ${colors.gray2}`,
     borderRadius: '3px',
   },
@@ -163,9 +167,9 @@ const styles = {
     '#list-pane ul li button:not(:disabled)': {
       cursor: 'pointer',
     },
-    // '#list-pane ul li:hover': {
-    //   backgroundColor: colors.orange
-    // },
+    '#list-pane ul li:not(.active) button:not(:disabled):hover': {
+      backgroundColor: colors.orange
+    },
     '.details-view': {
       'overflow-y': 'scroll'
     },
