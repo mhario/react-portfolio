@@ -5,7 +5,7 @@ import About from './components/About.jsx'
 import Experience from './components/Experience.jsx'
 import Tech from './components/Tech.jsx'
 import Contact from './components/Contact.jsx'
-// import Projects from './components/Projects.jsx'
+import Projects from './components/Projects.jsx'
 
 import { StyleRoot } from 'radium'
 
@@ -20,7 +20,7 @@ function App() {
         <About />
         <Experience />
         <Tech />
-        {/* <Projects /> */}
+        <Projects />
         <Contact />
       </div>
     </StyleRoot>

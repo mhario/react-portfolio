@@ -1,4 +1,7 @@
 export const sharedStyles = {
+  spacer10: {
+    display: 'inline-block',
+    marginBottom: '10px' },
   component: {
     marginTop: '50px',
     marginBottom: '50px',
@@ -30,7 +33,16 @@ export const sharedStyles = {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    fontSize: '15px'
+    fontSize: '15px',
+    marginLeft: '10%',
+    marginRight: '10%',
+  },
+  indent: {
+    marginLeft: '1em'
+  },
+  disabled: {
+    opacity: 0.5,
+    cursor: 'not-allowed'
   }
 }
 

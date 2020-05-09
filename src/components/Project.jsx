@@ -15,13 +15,30 @@ function Project(props) {
       <header>
         <h3>{props.project.name}</h3>
       </header>
+      <section style={{display:'inline-block', verticalAlign:'top',
+        width: props.project.image ? '50%' : '100%'}}>
+        {
+          props.project.content
+        }
+      </section>
       {
-        props.project.content
+        props.project.image
+          ? <img src={props.project.image}
+            alt="Screenshot"
+            style={{
+              display:'inline-block', width:'50%',
+              maxHeight:'475px', maxWidth:'475px'
+            }} />
+          : ''
       }
       <footer
         style={styles.buttonBar}>
-        <button>GitHub</button>
-        <button>Live</button>
+        <a href={props.project.githubUrl}>GitHub</a>
+        {
+          props.project.liveUrl
+            ? <a href={props.project.liveUrl}>Live</a>
+            : <span className="button" disabled>Live</span>
+        }
       </footer>
     </article>
   )
@@ -56,13 +73,25 @@ const styles = {
   },
 
   listStyling: {
-    'footer button': {
+    'ul': {
+      listStyle: 'none'
+    },
+    'footer a': {
       flexGrow: 1,
+      fontSize: '16px',
+      fontWeight: 'bold',
       justifyContent: 'space-between',
-      backgroundColor: 'blue',
       cursor: 'pointer',
       padding: '10px',
       ...sharedStyles.button
+    },
+    'footer span.button': {
+      flexGrow: 1,
+      fontSize: '14px',
+      padding: '10px',
+      color: '#555',
+      cursor: 'not-allowed',
+      backgroundColor: 'gainsboro',
     }
   }
 }
