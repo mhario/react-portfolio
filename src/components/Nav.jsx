@@ -55,7 +55,7 @@ const styles = {
   links: {
     a: {
       flexGrow: 1,
-      backgroundColor: 'black',
+      backgroundColor: '#333',
       color: colors.brightOrange,
       padding: '10px',
       border: 'none',

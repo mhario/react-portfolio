@@ -25,7 +25,8 @@ class Header extends React.Component {
       <header
         id="header"
         style={[styles.header,
-          this.state.isShown]}>
+          this.state.isShown,
+          styles.hideHorizontalScroll ]}>
 
         <Style
           scopeSelector="#header"
@@ -36,13 +37,13 @@ class Header extends React.Component {
             filter={'blur(5px)'}
             canvasFallback={true}>
             <header>
-              <h1 style={[styles.component.header, styles.textRight, {marginBottom: 0}]}>
+              <h1 style={[ styles.textRight, styles.header.myName ]}>
                 <a href="#about">
                   Mark Hario
                 </a>
               </h1>
             </header>
-            <ul style={{paddingLeft: '20px'}}>
+            <ul style={{paddingLeft: '40px'}}>
               <li>JavaScript Web Developer &</li>
               <li>Fullstack Software Engineer</li>
             </ul>
@@ -67,13 +68,17 @@ const styles = {
     backgroundSize: 'cover',
     position: 'relative',
     textAlign: 'right',
-    color: 'white'
+    color: 'white',
+    myName: [
+      { marginBottom: 0, paddingRight: 0 }
+    ]
   },
   nameplate: {
     position: 'absolute',
-    right: '5%', bottom: '15%',
-    backdropFilter: 'blur(3px)',
-    background:  'rgba(0,0,0,0.35)'
+    right: '-50px', bottom: '15%',
+    backdropFilter: 'blur(5px)',
+    background:  'rgba(0,0,0,0.35)',
+    boxShadow: '0px 1px 26px -3px black'
   },
 
   // Style component Object
@@ -81,9 +86,11 @@ const styles = {
     ul: {
       listStyle: 'none',
       margin: 0,
+      paddingRight: '17vw', paddingBottom: '12px'
     },
     'ul li': { padding: '10px 0' },
     'h1 a': {
+      paddingRight: '17vw',
       margin: 0,
       color: headerColor,
       fontWeight: 'bold',

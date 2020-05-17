@@ -48,6 +48,9 @@ export const sharedStyles = {
   },
   textRight: {
     textAlign: 'right'
+  },
+  hideHorizontalScroll: {
+    overflowX: 'hidden'
   }
 }
 
