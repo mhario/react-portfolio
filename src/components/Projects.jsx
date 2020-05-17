@@ -114,8 +114,8 @@ export default Radium(Projects)
 const styles = {
   ...sharedStyles,
   projects: {
-    paddingTop: 50,
-    margin: 'auto 10px'
+    paddingTop: '50px',
+    marginLeft: '10px', marginRight: '10px'
   },
   projectsSection: {
     whiteSpace: 'nowrap',

@@ -1,5 +1,6 @@
 import React from 'react'
 import Radium, { Style } from 'radium'
+import BackdropFilter from 'react-backdrop-filter'
 
 import splash from './images/splash.jpg'
 
@@ -30,19 +31,22 @@ class Header extends React.Component {
           scopeSelector="#header"
           rules={styles.contents} />
 
-        <section style={styles.section}>
-          <header>
-            <h1 style={styles.component.header}>
-              <a
-                href="#about">
-                Mark Hario
-              </a>
-            </h1>
-          </header>
-          <ul>
-            <li>JavaScript Web Developer &</li>
-            <li>Fullstack Software Engineer</li>
-          </ul>
+        <section style={styles.nameplate}>
+          <BackdropFilter
+            filter={'blur(5px)'}
+            canvasFallback={true}>
+            <header>
+              <h1 style={[styles.component.header, styles.textRight, {marginBottom: 0}]}>
+                <a href="#about">
+                  Mark Hario
+                </a>
+              </h1>
+            </header>
+            <ul style={{paddingLeft: '20px'}}>
+              <li>JavaScript Web Developer &</li>
+              <li>Fullstack Software Engineer</li>
+            </ul>
+          </BackdropFilter>
         </section>
       </header>
     )
@@ -65,9 +69,11 @@ const styles = {
     textAlign: 'right',
     color: 'white'
   },
-  section: {
+  nameplate: {
     position: 'absolute',
     right: '5%', bottom: '15%',
+    backdropFilter: 'blur(3px)',
+    background:  'rgba(0,0,0,0.35)'
   },
 
   // Style component Object
@@ -80,7 +86,8 @@ const styles = {
     'h1 a': {
       margin: 0,
       color: headerColor,
-      fontWeight: 'normal',
+      fontWeight: 'bold',
+      textDecoration: 'none'
     },
   }
 }

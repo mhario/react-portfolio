@@ -7,10 +7,12 @@ export const sharedStyles = {
     marginBottom: '50px',
     marginLeft: '50px',
     marginRight: '50px',
-    padding: '50px 0',
+    paddingTop: '50px', paddingBottom: '50px',
+    paddingLeft: '0px', paddingRight: '0px',
+
     header: {
       textAlign: 'left',
-      paddingLeft: '50px',
+      paddingLeft: '50px', paddingRight: '20px'
     },
   },
   button: {
@@ -43,6 +45,9 @@ export const sharedStyles = {
   disabled: {
     opacity: 0.5,
     cursor: 'not-allowed'
+  },
+  textRight: {
+    textAlign: 'right'
   }
 }
 
